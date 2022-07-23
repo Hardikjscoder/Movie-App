@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background: #080823;
+}
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: inherit;
+}
+
+.btn:hover {
+    color: white;
+    background: #06c3dd;
+    border-color: #06c3dd;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column
+}
+
+.search-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 15px 0 30px 0;
+}
+
+.search-block #search-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.search-block input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 0;
+    font-size: 1.15rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.search-block .btn {
+    width: 120px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid lightgray;
+    font-size: 1.15rem;
+}
+
+.search-block .btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+}
+
+.btn-load {
+    background-color: skyblue;
+    padding: 10px 25px;
+    border: none;
+    margin-top: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.movie-card {
+    border-radius: 10px;
+    margin: 1rem;
+    width: 295px;
+    flex-flow: column;
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.poster {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 295px;
+    height: 315px;
+}
+
+.movie-overview {
+    font-size: 0.85rem;
+}
+
+.movie-title,
+.movie-overview,
+.movie-date {
+    padding: 4px 12px;
+}
