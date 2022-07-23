@@ -21,14 +21,16 @@ function show_movies(data) {
     movieContainer.innerHTML = ''
 
     data.forEach(movie => {
-        const { title, poster_path, release_date, overview } = movie
+        const { title, poster_path, release_date, overview, vote_average, popularity } = movie
         const movie_card = document.createElement('div')
         movie_card.classList.add('movie-card')
 
         movie_card.innerHTML = `
                 <img src="https://image.tmdb.org/t/p/w500/${poster_path}" class="poster"></img>
                 <h2 class="movie-title">${title}</h2>
-                <h4 class="movie-date">${release_date}</h4>
+                <h4 class="movie-date" style="color: #1857a4;">${release_date}</h4>
+                <h4 class="movie-date" style="color: #ffa600;">${vote_average}</h4>
+                <h4 class="movie-date">Popularity : ${popularity}</h4>
                 <p class="movie-overview">${overview}</p>
                 `
         // Apend the movie card in the movie container
