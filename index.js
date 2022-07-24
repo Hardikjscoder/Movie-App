@@ -5,6 +5,12 @@ const discoverUrl = '/discover/movie?sort_by=popularity.desc&api_key='
 const mainURL = baseUrl + discoverUrl + apiKey
 const searchURL = `${baseUrl}/search/movie?api_key=${apiKey}`
 
+// Selectors
+const form = document.getElementById('search-form')
+const searchBtn = document.querySelector('.btn')
+const query = document.getElementById('query')
+const showResultsElement = document.getElementById('showResults')
+
 // Functions  
 get_movies(mainURL)
 
@@ -35,13 +41,10 @@ function show_movies(data) {
                 `
         // Apend the movie card in the movie container
         movieContainer.appendChild(movie_card)
+
+        query.value = null
     })
 }
-
-// Selectors
-const form = document.getElementById('search-form')
-const searchBtn = document.querySelector('.btn')
-const query = document.getElementById('query')
 
 // Event Listener on form
 form.addEventListener('submit', e => {
@@ -53,5 +56,7 @@ form.addEventListener('submit', e => {
     if (searchVal) {
         // show the movies according to the query
         get_movies(searchURL + '&query=' + searchVal)
+        showResultsElement.style.display = 'block'
+        showResultsElement.innerHTML = `Showing Results For : ${searchVal}`
     }
 })

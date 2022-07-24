@@ -6,8 +6,7 @@
 }
 
 body {
-    color: white;
-    background: #080823;
+    background: #f2f2f2;
 }
 
 .btn {
@@ -16,12 +15,6 @@ body {
     padding: 6px 8px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: inherit;
-}
-
-.btn:hover {
-    color: white;
-    background: #06c3dd;
-    border-color: #06c3dd;
 }
 
 .wrapper {
@@ -63,13 +56,8 @@ body {
 .search-block .btn {
     width: 120px;
     background: rgba(255, 255, 255, 0.25);
-    border: 1px solid lightgray;
+    border: none;
     font-size: 1.15rem;
-}
-
-.search-block .btn:hover {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid white;
 }
 
 .btn-load {
@@ -80,7 +68,7 @@ body {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -97,7 +85,7 @@ a {
     margin: 1rem;
     width: 295px;
     flex-flow: column;
-    background-color: #f2f2f2;
+    background-color: #fff;
     color: black;
 }
 
